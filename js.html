@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>js</title>
+  </head>
+  <body>
+    <button id="btn">클릭</button>
+
+    <script>
+      let btn = document.querySelector('#btn')
+      let i = 0
+
+      let timer = setInterval(function () {
+        i++
+        console.log(i)
+      }, 1000)
+      // setInterval(함수, 시간)
+
+      btn.addEventListener('click', function () {
+        clearInterval(timer)
+      })
+    </script>
+  </body>
+</html>
